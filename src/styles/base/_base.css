@@ -1,15 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
 :root {
-	--fontSansSerif: sans-serif;
-	--colorDark: #222;
+	--fontOpenSans: 'Open Sans', sans-serif;
+	--colorDark: #000;
+	--colorViolet: #5d257c;
+	--colorWhite: #fff;
 }
 
 @define-mixin reset $fz {
 	color: var(--colorDark);
 	font-size: $fz;
-	font-family: var(--fontSansSerif);
+	font-family: var(--fontOpenSans);
 	-webkit-font-smoothing: antialiased;
 }
 
+@define-mixin flex $dp $jc $ai {
+	display: $dp;
+	justify-content: jc;
+	align-items: $ai;
+}
 
 body {
 	@mixin reset 16px;

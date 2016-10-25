@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Pug & PostCSS</title>
+  <link rel="stylesheet" href="node_modules/bulma/css/bulma.css">
   <link rel="stylesheet" href="dist/css/style.min.css">
 </head>
 <body>
-  <h1>Start header</h1><a href="#"><img class="logo" src="https://doc.opensuse.org/projects/kiwi/doc/static/images/icon-important.png"></a>
-  <p class="text">some text paragraph</p>
-  <p class="another">paragraph</p>
-  <footer><a class="link" href="#">made in studio</a>
-    <p class="contacts">street name house 5 </p>
-  </footer>
+  <div class="container main-container">
+    <header><a class="logo" href="#"><img src="dist/img/logo.png"></a>
+      <form class="header-form">
+        <input class="input" type="search">
+        <input class="button" type="button">
+      </form>
+    </header>
+  </div>
 </body>

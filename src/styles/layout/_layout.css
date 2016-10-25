@@ -1,0 +1,13 @@
+/*.container {
+    min-height: 100vh;
+    width: 100%;
+    max-width: 2040px;
+}*/
+/*header {
+    height: 248px;
+    width: 100%;
+}*/
+.main-container {
+    max-width: 1600px;
+    min-height: 100vh;
+}

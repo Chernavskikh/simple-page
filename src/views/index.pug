@@ -1,8 +1,9 @@
 include template/_head.pug
 body
-	h1 Start header
-	a(href='#')
-		img.logo(src='https://doc.opensuse.org/projects/kiwi/doc/static/images/icon-important.png')
-	p.text some text paragraph
-	p.another paragraph
-	include template/_footer.pug
+	div.container.main-container
+		header
+			a(href="#").logo
+				img(src='dist/img/logo.png')
+			form.header-form
+				input.input(type="search")
+				input.button(type="button")
