@@ -1,11 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
 
 
 :root {
 	--fontOpenSans: 'Open Sans', sans-serif;
-	--colorDark: #000;
-	--colorViolet: #5d257c;
+	--colorDark: #2b303b;
+	--colorViolet: #835fa8;
 	--colorWhite: #fff;
+	--colorGreen: #3dd2ae;
+	--colorLightGray: #f4f8fb;
+	--colorDarkGray: #232831;
 }
 
 @define-mixin reset $fz {
@@ -15,12 +18,78 @@
 	-webkit-font-smoothing: antialiased;
 }
 
-@define-mixin flex $dp $jc $ai {
-	display: $dp;
-	justify-content: jc;
+@define-mixin flex $fd, $jc, $ai {
+	display: flex;
+	flex-direction: $fd;
+	justify-content: $jc;
 	align-items: $ai;
+}
+* {
+	box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 body {
 	@mixin reset 16px;
+	background-color: #282828;
+}
+
+h1 {
+	color: var(--colorWhite);
+	font-size: 70px;
+	font-weight: 300;
+	line-height: 70px;
+}
+
+h2 {
+	color: var(--colorWhite);
+	font-size: 40px;
+	font-weight: 300;
+	line-height: 40px;
+}
+
+p {
+	color: var(--colorWhite);
+	font-size: 18px;
+	line-height: 30px;
 }

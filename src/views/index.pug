@@ -1,9 +1,66 @@
+//mixin
+mixin info-block(title)
+	h3.info-title= title
+	p.info-preheader Flannel ennui narwhal, craft beer twee Vice plaid authentic synth.
+	p.info-text Kickstarter umami Intelligentsia kogi. Try-hard flannel literally, chambray blog crucifix put a bird on it four dollar toast cardigan scenester aesthetic sartorial chia messenger bag Pinterest.
+
+mixin steps(link, number, header, text)
+	.step
+		img(src=link)
+		p.step-header
+			span.number= number
+			span.header= header
+		p.step-text= text
+
 include template/_head.pug
 body
 	div.container.main-container
 		header
-			a(href="#").logo
-				img(src='dist/img/logo.png')
-			form.header-form
-				input.input(type="search")
-				input.button(type="button")
+			.header-nav
+				a(href="#").logo
+					img(src='dist/img/logo.png')
+				form.header-form
+					input.input.search(type="search")
+					input.button.violet-btn(type="button" value="buy $21")
+					button.line-button
+						i.fa.fa-bars
+			.header-text
+				h1 Building bulletproof fucking apps
+				p Kickstarter umami Intelligentsia kogi. Try-hard flannel literally, chambray blog crucifix put a bird on it four dollar toast cardigan
+
+		.violet-block
+			h2 Super Duper & such
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+			button.button.green-btn see more
+			img(src='dist/img/phone.png').phone
+
+		.gray-block.columns
+			.column
+				+info-block('Design & Features')
+				button.button.green-btn See more
+			.column
+				+info-block('Pocket Power')
+				button.button.green-btn By now
+			.column
+				+info-block('Inspired by the world')
+				button.button.green-btn Contact Us
+
+		.darkgray-block
+			h2 Designed for humans
+			p  Kickstarter umami Intelligentsia kogi. Try-hard flannel literally, chambray blog crucifix put a bird on it four dollar toast cardigan scenester aesthetic sartorial chia messenger bag Pinterest. 3 wolf moon Thundercats Banksy paleo, yr four loko Shoreditch dreamcatcher.
+			.site-view
+				span
+				span
+				span
+
+		.dark-block
+			+steps('dist/img/pen-icon.png', '01', 'Design', 'Scenester PBR deep v jean shorts typewriter. Sustainable keytar Tumblr, authentic mustache locavore scenester gentrify meh banjo fanny pack health goth. Four dollar toast scenester XOXO crucifix, mumblecore banh mi yr cold-pressed Bushwick.')
+			+steps('dist/img/romb-icon.png', '02', 'Refinement', 'Pickled 8-bit tousled health goth farm-to-table Pitchfork, lumbersexual church-key photo booth Blue Bottle. Aesthetic viral American Apparel, scenester distillery iPhone 8-bit tousled ugh ethical pork belly biodiesel street art asymmetrical whatever.')
+			+steps('dist/img/brush-icon.png', '03', 'Dive In', 'Pickled 8-bit tousled health goth farm-to-table Pitchfork, lumbersexual church-key photo booth Blue Bottle. Aesthetic viral American Apparel, scenester distillery iPhone 8-bit tousled ugh ethical pork belly biodiesel street art asymmetrical whatever.')
+			+steps('dist/img/search-icon.png', '04', 'Research', 'Raw denim health goth artisan, kitsch literally shabby chic meh small batch Wes Anderson retro Neutra. Blog meggings semiotics, irony swag cred kale chips aesthetic literally VHS craft beer chia.')
+
+		.main-block
+			.connect
+				h2 Conectivity
+				p.connect-preheader Flannel ennui narwhal, craft beer twee Vice plaid authentic synth Intelligentsia stumptown gluten-free drinking vinegar Schlitz mixtape
+				p.connect-text Kickstarter umami Intelligentsia kogi. Try-hard flannel literally, chambray blog crucifix put a bird on it four dollar toast cardigan scenester aesthetic sartorial chia messenger bag Pinterest. 3 wolf moon Thundercats Banksy paleo, yr four loko Shoreditch dreamcatcher. 

@@ -1781,6 +1781,10 @@ fn-getter@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fn-getter/-/fn-getter-1.0.0.tgz#f0d78e316b0c784bab2d2c0eb1b45a7742d5adaf"
 
+font-awesome:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/font-awesome/-/font-awesome-4.7.0.tgz#8fa8cf0411a1a31afd07b06d2902bb9fc815a133"
+
 fonteditor-core@^0.0.21:
   version "0.0.21"
   resolved "https://registry.yarnpkg.com/fonteditor-core/-/fonteditor-core-0.0.21.tgz#d1d1469d0cd6463f54682cedea5d3a6328190644"
